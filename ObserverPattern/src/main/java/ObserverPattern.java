@@ -68,9 +68,14 @@ public class ObserverPattern {
 
         }
         else if (s.equals("3")) {
-            new SheetsQuickstart(customer_);
+            new GoogleEdit(customer_);
             String s1 = "baby";
-            System.out.println("Enter new customer's name at String 's1'.");
+            System.out.println("Enter old customer's name at String 's1'.");
+            
+            String s2 = "bay";
+            System.out.println("Enter new customer's name at String 's2'.");
+            
+            customer_.setName(s1 + "ooo" + s2);
         }
         else {
             System.out.println("Invalid input (Please start program again).");
