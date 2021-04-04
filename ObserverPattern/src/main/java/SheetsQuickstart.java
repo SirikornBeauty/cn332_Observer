@@ -87,15 +87,15 @@ public class SheetsQuickstart extends Observer{
                 .execute();
         List<List<Object>> values = response.getValues();
         
-//        ValueRange requestBody  = new ValueRange().setValues(Arrays.asList(
-//                Arrays.asList(customer_.getName())));
-//
-//        Sheets sheetsService = getSheetsService();
-//        Sheets.Spreadsheets.Values.Append request =
-//            sheetsService.spreadsheets().values().append(spreadsheetId, range, requestBody);
-//        request.setValueInputOption("USER_ENTERED");
-//        request.setInsertDataOption( "OVERWRITE");
-//        AppendValuesResponse response_ = request.execute();
+        ValueRange requestBody  = new ValueRange().setValues(Arrays.asList(
+                Arrays.asList(customer_.getName())));
+
+        Sheets sheetsService = getSheetsService();
+        Sheets.Spreadsheets.Values.Append request =
+            sheetsService.spreadsheets().values().append(spreadsheetId, range, requestBody);
+        request.setValueInputOption("USER_ENTERED");
+        request.setInsertDataOption( "OVERWRITE");
+        AppendValuesResponse response_ = request.execute();
         
                         
         if (values == null || values.isEmpty()) {
@@ -107,6 +107,7 @@ public class SheetsQuickstart extends Observer{
                 System.out.printf("%s \n", row.get(0));
             }
         }
+        System.out.println("-- Update Google Sheets --");
     }
     
     
